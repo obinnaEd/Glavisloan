@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../Assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../Assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../Assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../../Assets/images/site.webmanifest">
+
+    <!-- fontawsome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../JS/tailwind.config.js"></script>
+
+    <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+
+
+<body>
+
+    <!-- app header -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <!-- Top Header (visible on larger screens, hidden on mobile) -->
+        <div class="bg-brand-blue text-brand-white py-2 hidden sm:block">
+            <div class="container mx-auto px-4 flex justify-end items-center">
+                <a href="tel:123-456-7890"
+                    class="flex items-center space-x-2 text-sm text-brand-white hover:text-brand-gray smooth-transition mr-4  rounded"
+                    aria-label="Call us at 123-456-7890">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>123-456-7890</span>
+                </a>
+                <a href="#" class="text-sm text-brand-white hover:text-brand-gray smooth-transition  rounded px-2 py-1">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <nav class="bg-brand-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+            <div class="container mx-auto px-4 py-3 lg:py-4">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="../../../index.html" class="flex-shrink-0  rounded">
+                        <!-- Logo for large screens -->
+                        <img src="../../Assets/images/lgLogo.png" alt="Company Logo"
+                            class="hidden md:block h-10 lg:h-12 smooth-transition">
+                        <!-- Logo for small screens -->
+                        <img src="../../Assets/images/smLogo.png" alt="Company Logo"
+                            class="md:hidden h-10 smooth-transition">
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button"
+                        class="md:hidden p-2 text-brand-blue  rounded-lg smooth-transition hover:bg-brand-gray smooth-transition cursor-pointer"
+                        aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                        </div>
+                    </button>
+
+                    <!-- Desktop Nav Links & Button -->
+                    <div id="main-nav-menu"
+                        class="hidden md:flex md:items-center lg:space-x-8 md:space-x-4 cursor-pointer">
+                        <!-- Dropdown: Loans & Financing -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="loans">
+                                <span class="md:text-sm lg:text-base ">Loans & Financing</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="Loans and Financing submenu">
+                                <a href="small-business-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Small Business Loans</a>
+                                <a href="working-capital-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Working Capital Loans</a>
+                                <a href="short-term-business-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Short Term Business Loans</a>
+                                <a href="equipment-financing.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Equipment Financing & Leasing</a>
+                                <a href="types-of-funding-solutions.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Types of Funding Solutions</a>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown: Who We Serve -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="serve">
+                                <span class="md:text-sm lg:text-base ">Who We Serve</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="Who We Serve submenu">
+                                <a href="../who-we-serve/industries.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Industries</a>
+                                <a href="../who-we-serve/customer-reviews.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Customer Reviews</a>
+                                <a href="../who-we-serve/meet-our-customers.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Meet Our Customers</a>
+                            </div>
+                        </div>
+
+                       
+
+                        <!-- Dropdown: About Us -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="about">
+                                <span class="md:text-sm lg:text-base ">About Us</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="About Us submenu">
+                                <a href="../about-us/sponsorships.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Sponsorships</a>
+                               
+                               
+                                <a href="../about-us/how-we-work.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">How We Work</a>
+                            </div>
+                        </div>
+
+                        <!-- "Apply Now" Button -->
+                        <a href="../apply-for-loan.html"
+                            class="bg-brand-green text-brand-white px-4 lg:px-6 py-2 rounded-full font-bold hover:bg-brand-orange smooth-transition  md:text-sm lg:text-base shadow-md hover:shadow-lg transform hover:scale-105">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0 smooth-transition"
+                    aria-label="Mobile navigation menu">
+                    <div class="py-4 space-y-2">
+                        <!-- Mobile Contact Info -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <a href="tel:123-456-7890"
+                                class="flex items-center space-x-3 text-brand-blue hover:text-brand-orange smooth-transition p-3 rounded-lg "
+                                aria-label="Call us at 123-456-7890">
+                                <i class="fas fa-phone text-sm" aria-hidden="true"></i>
+                                <span class="font-medium">123-456-7890</span>
+                            </a>
+                        </div>
+
+                        <!-- Mobile Dropdown: Loans & Financing -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="loans">
+                                <span>Loans & Financing</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="/loans-financing/small-business-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Small
+                                        Business Loans</a>
+                                    <a href="/loans-financing/working-capital-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Working
+                                        Capital Loans</a>
+                                    <a href="/loans-financing/short-term-business-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Short
+                                        Term Business Loans</a>
+                                    <a href="/loans-financing/equipment-financing-leasing"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Equipment
+                                        Financing & Leasing</a>
+                                    <a href="/loans-financing/types-of-funding-solutions"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Types
+                                        of Funding Solutions</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Dropdown: Who We Serve -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="serve">
+                                <span>Who We Serve</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="/who-we-serve/industries"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Industries</a>
+                                    <a href="/who-we-serve/customer-reviews"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Customer
+                                        Reviews</a>
+                                    <a href="/who-we-serve/meet-our-customers"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Meet
+                                        Our Customers</a>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                        <!-- Mobile Dropdown: About Us -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="about">
+                                <span>About Us</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="../about-us/sponsorships.html"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Sponsorships</a>
+                                   
+                                   
+                                    <a href="../about-us/how-we-work.html"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">How
+                                        We Work</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile "Apply Now" Button -->
+                        <div class="pt-4">
+                            <a href="../apply-for-loan.html"
+                                class="block w-full bg-brand-green text-brand-white text-center py-3 px-6 rounded-full font-bold hover:bg-brand-orange smooth-transition shadow-md">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container mx-auto px-4 py-16">
+
+            <section class="relative min-h-screen flex items-center mt-6 md:mt-24">
+                <!-- Background Image -->
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><rect width=%221200%22 height=%22800%22 fill=%22%23D4A574%22/><circle cx=%22200%22 cy=%22400%22 r=%22150%22 fill=%22%23E6C29A%22 opacity=%220.3%22/><circle cx=%22900%22 cy=%22200%22 r=%22200%22 fill=%22%23C8956B%22 opacity=%220.2%22/></svg>');">
+                    <!-- Overlay for better text readability -->
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                </div>
+
+                <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left Content -->
+                        <div class="text-white">
+                            <!-- Forbes Badge -->
+                            <div class="mb-8">
+                                <div class="inline-block bg-brand-blue p-4 rounded-lg shadow-lg">
+                                    <div class="text-white font-bold text-lg">Forbes</div>
+                                    <div class="text-brand-gray text-sm">ADVISOR</div>
+                                    <div class="flex items-center mt-2">
+                                        <div class="text-yellow-400 text-lg">★</div>
+                                        <span class="text-white font-bold ml-2">BEST OF</span>
+                                    </div>
+                                    <div class="text-brand-orange font-bold text-xl">2024</div>
+                                    <div class="text-brand-gray text-xs mt-1">Personal Loans</div>
+                                    <div class="text-brand-gray text-xs">Best Rates/Terms</div>
+                                </div>
+                            </div>
+
+                            <!-- Main Heading -->
+                            <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                                Glavisloan Business Loans: Customer Reviews 2025
+                            </h1>
+
+                            <!-- Subtext -->
+                            <p class="text-xl opacity-90 mb-4">
+                                What real small business <span class="text-brand-orange font-semibold">customers</span>
+                                have to say about Glavisloan
+                            </p>
+
+                            <!-- Customer Reviews Link -->
+                            <div class="flex items-center text-lg">
+                                <span class="opacity-90">★★★★★</span>
+                                <a href="../who-we-serve/customer-reviews.html"
+                                    class="ml-2 underline hover:text-brand-orange transition-colors">Customer
+                                    Reviews</a>
+                            </div>
+                        </div>
+
+                        <!-- Right Form -->
+                        <div class="bg-brand-blue  p-8 shadow-2xl">
+                            <h2 class="text-white text-2xl font-bold mb-6">
+                                Ready To Move Your Business Forward?
+                            </h2>
+
+                            <form class="space-y-4" id="leadForm">
+                                <!-- Name Field -->
+                                <div>
+                                    <input type="text" placeholder="First & Last Name *"
+                                        class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent"
+                                        required>
+                                </div>
+
+                                <!-- Email Field -->
+                                <div>
+                                    <input type="email" placeholder="Email *"
+                                        class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent"
+                                        required>
+                                </div>
+
+                                <!-- Phone Field -->
+                                <div>
+                                    <input type="tel" placeholder="Phone *"
+                                        class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent"
+                                        required>
+                                </div>
+
+                                <!-- Annual Sales Dropdown -->
+                                <div>
+                                    <label class="text-white text-sm mb-2 flex items-center">
+                                        Select your estimated annual gross sales
+                                        <span class="ml-1 text-brand-gray cursor-help"
+                                            title="This helps us provide better funding options">ⓘ</span>
+                                    </label>
+                                    <select
+                                        class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent bg-white">
+                                        <option value="">-- select --</option>
+                                        <option value="under-100k">Under $100,000</option>
+                                        <option value="100k-250k">$100,000 - $250,000</option>
+                                        <option value="250k-500k">$250,000 - $500,000</option>
+                                        <option value="500k-1m">$500,000 - $1,000,000</option>
+                                        <option value="over-1m">Over $1,000,000</option>
+                                    </select>
+                                </div>
+
+                                <!-- Checkbox -->
+                                <div class="flex items-start space-x-3 text-xs text-brand-gray">
+                                    <input type="checkbox" id="consent" class="mt-1 rounded" required>
+                                    <label for="consent" class="leading-relaxed">
+                                        By checking this box, you are agreeing to receive marketing communications from
+                                        us. You can unsubscribe at any time. For more information on how we store and
+                                        use your data, please see our Privacy Policy. Message frequency varies per user.
+                                        Carriers are not liable for delayed or undelivered messages. You can reply STOP
+                                        to opt out. Standard rates may apply.
+                                    </label>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit"
+                                    class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300 text-lg">
+                                    GET FUNDING OPTIONS
+                                </button>
+
+                                <!-- Security Badges -->
+                                <div
+                                    class="flex items-center justify-center space-x-4 mt-6 pt-4 border-t border-gray-600">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center">
+                                            <span class="text-xs font-bold text-brand-blue">🔒</span>
+                                        </div>
+                                        <span class="text-brand-gray text-xs">SSL Secured</span>
+                                    </div>
+                                    <div class="text-brand-gray text-xs flex items-center">
+                                        <span class="mr-1">A+</span>
+                                        <span>BBB Rating</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="text-center mt-24 mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue">
+                    The Glavisloan Difference - Solutions Tailored to Your Needs
+                </h2>
+
+                <p class="text-brand-blue mt-3 max-w-3xl mx-auto">
+                    Why work with Glavisloan? We will let our awards and customers speak for themselves. We’re
+                    proud to hold an A+ rating with the Better Business Bureau, a Top 3 in Customer Satisfaction from
+                    LendingTree, and multiple awards from Forbes, including Best Working Capital Loan, Best Online
+                    Business Loans, and Best Small Business Loan for Small to Mid-Sized Businesses.
+
+
+                </p>
+                <p class="text-brand-blue mt-3 max-w-3xl mx-auto">
+                    We take customer satisfaction seriously and believe that your success is our success. Explore what
+                    our customers say about us on Trustpilot and Google and watch interviews with small business owners
+                    who used funding to support their business.
+
+
+                </p>
+            </div>
+
+
+            <section class="bg-brand-white py-16">
+                <div class="max-w-6xl mx-auto px-4">
+                    <!-- Heading -->
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand-blue">
+                            What Our Customers are Saying
+                        </h2>
+                        <p class="text-brand-blue mt-2">
+                            2,060 Reviews on Trustpilot 4.6 / 5
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <!-- Left Card -->
+                        <div class="bg-white shadow-md rounded-lg p-6 text-brand-blue">
+                            <img src="../../Assets/images/hero-bg.png" alt="Customer" class="w-full rounded-md mb-4" />
+                            <h3 class="text-brand-orange font-bold">Meet John Meier</h3>
+                            <p class="font-semibold">Owner of Bob’s Home Heating and Cooling</p>
+                            <p class="text-sm mt-3">
+                                “With a hands-on, consultative approach to small business loans,
+                                Glavisloan helped secure the right amount of funding and made
+                                the process painless.”
+                            </p>
+                        </div>
+
+                        <!-- Swiper Carousel -->
+                        <div class="md:col-span-2">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Slide 1 -->
+                                    <div class="swiper-slide">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <!-- Middle Trustpilot -->
+                                            <div class="text-center">
+                                                <p class="font-bold text-lg text-brand-blue mb-2">Excellent</p>
+                                                <div class="flex justify-center items-center mb-1">
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                </div>
+                                                <p class="text-sm text-brand-blue mb-2">Based on 2,060 reviews</p>
+                                                <img src="../../Assets/images/partnerTrustPilot.webp" alt="Trustpilot"
+                                                    class="mx-auto h-6" />
+                                            </div>
+
+                                            <!-- Right Review -->
+                                            <div class="bg-white shadow-md rounded-lg p-6 text-left">
+                                                <div class="flex items-center mb-3">
+                                                    <i class="fa-solid fa-star text-brand-green text-lg mr-1"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-lg mr-1"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-lg mr-1"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-lg mr-1"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-lg"></i>
+                                                </div>
+                                                <h3 class="text-brand-blue font-bold mb-1">
+                                                    Working with Stephen Han was fantastic
+                                                </h3>
+                                                <p class="text-sm text-brand-blue mb-2">
+                                                    Working with Stephen Han was fantastic. We were impressed with his
+                                                    ability to ex…
+                                                </p>
+                                                <p class="text-xs text-brand-gray">Vanessa Kear, December 12</p>
+                                                <p class="text-xs text-brand-gray mt-2">Showing our favorite reviews</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="swiper-slide">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <!-- Middle Trustpilot -->
+                                            <div class="text-center">
+                                                <p class="font-bold text-lg text-brand-blue mb-2">Excellent</p>
+                                                <div class="flex justify-center items-center mb-1">
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-xl"></i>
+                                                </div>
+                                                <p class="text-sm text-brand-blue mb-2">Based on 2,060 reviews</p>
+                                                <img src="../../Assets/images/partnerTrustPilot.webp" alt="Trustpilot"
+                                                    class="mx-auto h-6" />
+                                            </div>
+
+                                            <!-- Right Review -->
+                                            <div class="bg-white shadow-md rounded-lg p-6 text-left">
+                                                <div class="flex items-center mb-3">
+                                                    <i class="fa-solid fa-star text-brand-green text-lg mr-1"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-lg mr-1"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-lg mr-1"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-lg mr-1"></i>
+                                                    <i class="fa-solid fa-star text-brand-green text-lg"></i>
+                                                </div>
+                                                <h3 class="text-brand-blue font-bold mb-1">
+                                                    Amazing experience
+                                                </h3>
+                                                <p class="text-sm text-brand-blue mb-2">
+                                                    Glavisloan made it so easy for us to get the funds we needed.
+                                                </p>
+                                                <p class="text-xs text-brand-gray">John Smith, March 8</p>
+                                                <p class="text-xs text-brand-gray mt-2">Showing our favorite reviews</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Add more slides as needed -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logos Strip -->
+                    <div class="mt-12 border-t border-brand-gray pt-6">
+                        <div class="flex flex-wrap justify-center gap-10 opacity-60">
+                            <img src="../../Assets/images/partnerTrustPilot.webp" alt="Trustpilot logo" class="h-6">
+                            <img src="../../Assets/images/partnerRating.webp" alt="A+ Rating logo" class="h-6">
+                            <img src="../../Assets/images/partnerInc.webp" alt="Inc 5000 logo" class="h-6">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- app footer -->
+    <footer class="bg-brand-blue text-brand-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><!-- Logo & Description -->
+                <div class="mb-8 lg:mb-0"><a href="/" class="flex-shrink-0 mb-4"><img
+                            src="../../Assets/images/logowhite.png" alt="Large Logo" class="h-12"></a>
+                    <p class="text-sm text-brand-gray">Providing tailored financial solutions for businesses to thrive
+                        and grow.</p>
+                </div> <!-- Company Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul>
+                        <li class="mb-2"><a href="../about-us.html"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">About
+                                Us</a></li>
+                        
+                      
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">How We
+                                Work</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products & Solutions -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Products & Solutions</h4>
+                    <ul>
+                        <li class="mb-2"><a href="../loanViews/small-business-loans.html"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Small
+                                Business Loans</a></li>
+                        <li class="mb-2"><a href="../loanViews/working-capital-loans.html"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Working
+                                Capital</a></li>
+                        <li class="mb-2"><a href="../loanViews/equipment-financing.html"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Equipment
+                                Financing</a></li>
+                        <li class="mb-2"><a href="../loanViews/types-of-funding-solutions.html"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Funding
+                                Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-gray mt-8 pt-6 text-center text-sm text-brand-gray">
+                &copy; 2024 Glavisloan. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Your App JS -->
+    <script src="../../JS/app.js"></script>
+</body>
+
+</html>

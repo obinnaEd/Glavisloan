@@ -153,3 +153,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+
+const swiper = new Swiper('.mySwiper', {
+    loop: true,                     // make it loop endlessly
+    autoplay: {
+        delay: 3000,                  // 3 seconds per slide
+        disableOnInteraction: false,  // keep autoplay even after user interaction
+    },
+    speed: 800,                     // smooth transition speed
+    effect: 'slide',                // or 'fade', 'cube', etc.
+});
+
+document.getElementById('leadForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+
+    // Simple validation
+    const requiredFields = ['First & Last Name', 'Email', 'Phone'];
+    let isValid = true;
+
+    // Check if checkbox is checked
+    if (!document.getElementById('consent').checked) {
+        alert('Please agree to receive marketing communications');
+        return;
+    }
+
+    // Here you would typically send the data to your backend
+    console.log('Form submitted:', data);
+
+    // Show success message (replace with your actual submission logic)
+    alert('Thank you! We\'ll be in touch soon with your funding options.');
+});
+
+// Phone number formatting
+document.querySelector('input[type="tel"]').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length >= 6) {
+        value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+    } else if (value.length >= 3) {
+        value = value.replace(/(\d{3})(\d{3})/, '($1) $2');
+    }
+    e.target.value = value;
+});

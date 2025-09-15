@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Term Business Loans</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../Assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../Assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../Assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../../Assets/images/site.webmanifest">
+
+    <!-- fontawsome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../JS/tailwind.config.js"></script>
+
+    <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+
+
+<body>
+
+    <!-- app header -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <!-- Top Header (visible on larger screens, hidden on mobile) -->
+        <div class="bg-brand-blue text-brand-white py-2 hidden sm:block">
+            <div class="container mx-auto px-4 flex justify-end items-center">
+                <a href="tel:123-456-7890"
+                    class="flex items-center space-x-2 text-sm text-brand-white hover:text-brand-gray smooth-transition mr-4  rounded"
+                    aria-label="Call us at 123-456-7890">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>123-456-7890</span>
+                </a>
+                <a href="#" class="text-sm text-brand-white hover:text-brand-gray smooth-transition  rounded px-2 py-1">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <nav class="bg-brand-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+            <div class="container mx-auto px-4 py-3 lg:py-4">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="../../../index.html" class="flex-shrink-0  rounded">
+                        <!-- Logo for large screens -->
+                        <img src="../../Assets/images/lgLogo.png" alt="Company Logo"
+                            class="hidden md:block h-10 lg:h-12 smooth-transition">
+                        <!-- Logo for small screens -->
+                        <img src="../../Assets/images/smLogo.png" alt="Company Logo"
+                            class="md:hidden h-10 smooth-transition">
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button"
+                        class="md:hidden p-2 text-brand-blue  rounded-lg smooth-transition hover:bg-brand-gray smooth-transition cursor-pointer"
+                        aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                        </div>
+                    </button>
+
+                    <!-- Desktop Nav Links & Button -->
+                    <div id="main-nav-menu"
+                        class="hidden md:flex md:items-center lg:space-x-8 md:space-x-4 cursor-pointer">
+                        <!-- Dropdown: Loans & Financing -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="loans">
+                                <span class="md:text-sm lg:text-base ">Loans & Financing</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="Loans and Financing submenu">
+                                <a href="small-business-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Small Business Loans</a>
+                                <a href="working-capital-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Working Capital Loans</a>
+                                <a href="short-term-business-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Short Term Business Loans</a>
+                                <a href="equipment-financing.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Equipment Financing & Leasing</a>
+                                <a href="types-of-funding-solutions.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Types of Funding Solutions</a>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown: Who We Serve -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="serve">
+                                <span class="md:text-sm lg:text-base ">Who We Serve</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="Who We Serve submenu">
+                                <a href="/who-we-serve/industries"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Industries</a>
+                                <a href="/who-we-serve/customer-reviews"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Customer Reviews</a>
+                                <a href="/who-we-serve/meet-our-customers"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Meet Our Customers</a>
+                            </div>
+                        </div>
+
+                      
+
+                        <!-- Dropdown: About Us -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="about">
+                                <span class="md:text-sm lg:text-base ">About Us</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="About Us submenu">
+                                <a href="#"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Sponsorships</a>
+                                
+                               
+                                <a href="#"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">How We Work</a>
+                            </div>
+                        </div>
+
+                        <!-- "Apply Now" Button -->
+                        <a href="/apply-for-loan"
+                            class="bg-brand-green text-brand-white px-4 lg:px-6 py-2 rounded-full font-bold hover:bg-brand-orange smooth-transition  md:text-sm lg:text-base shadow-md hover:shadow-lg transform hover:scale-105">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0 smooth-transition"
+                    aria-label="Mobile navigation menu">
+                    <div class="py-4 space-y-2">
+                        <!-- Mobile Contact Info -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <a href="tel:123-456-7890"
+                                class="flex items-center space-x-3 text-brand-blue hover:text-brand-orange smooth-transition p-3 rounded-lg "
+                                aria-label="Call us at 123-456-7890">
+                                <i class="fas fa-phone text-sm" aria-hidden="true"></i>
+                                <span class="font-medium">123-456-7890</span>
+                            </a>
+                        </div>
+
+                        <!-- Mobile Dropdown: Loans & Financing -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="loans">
+                                <span>Loans & Financing</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="/loans-financing/small-business-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Small
+                                        Business Loans</a>
+                                    <a href="/loans-financing/working-capital-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Working
+                                        Capital Loans</a>
+                                    <a href="/loans-financing/short-term-business-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Short
+                                        Term Business Loans</a>
+                                    <a href="/loans-financing/equipment-financing-leasing"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Equipment
+                                        Financing & Leasing</a>
+                                    <a href="/loans-financing/types-of-funding-solutions"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Types
+                                        of Funding Solutions</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Dropdown: Who We Serve -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="serve">
+                                <span>Who We Serve</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="/who-we-serve/industries"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Industries</a>
+                                    <a href="/who-we-serve/customer-reviews"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Customer
+                                        Reviews</a>
+                                    <a href="/who-we-serve/meet-our-customers"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Meet
+                                        Our Customers</a>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                        <!-- Mobile Dropdown: About Us -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="about">
+                                <span>About Us</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="#"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Sponsorships</a>
+                                    
+                                    
+                                    <a href="#"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">How
+                                        We Work</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile "Apply Now" Button -->
+                        <div class="pt-4">
+                            <a href="/apply-for-loan"
+                                class="block w-full bg-brand-green text-brand-white text-center py-3 px-6 rounded-full font-bold hover:bg-brand-orange smooth-transition shadow-md">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto pt-24 text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold text-brand-blue mb-4 leading-tight">Get Fast Funding with a
+                    Short Term Business Loan</h1>
+                <p class="text-lg text-gray-700">When you need capital quickly, a short-term business loan is the
+                    answer. This type of loan is ideal for covering unexpected costs, taking advantage of a limited-time
+                    opportunity, or handling an immediate emergency. Our streamlined process ensures you get a funding
+                    decision and capital in as little as 24 hours.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center mt-12 space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2"><img src="../../Assets/images/construction.png" alt="Short Term Business Loans"
+                        class="rounded-lg shadow-lg"></div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-brand-blue mb-4">Why Choose a Short-Term Loan?</h2>
+                    <ul class="list-none text-lg text-gray-700 space-y-4 mb-8">
+                        <li class="flex items-start"><i
+                                class="fas fa-check text-brand-green mt-1 mr-2"></i><span>Receive a funding decision in
+                                24 hours or less.</span></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-check text-brand-green mt-1 mr-2"></i><span>Simplified application with
+                                less paperwork.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-green mt-1 mr-2"></i><span>Quick
+                                access to funds for urgent needs.</span></li>
+                    </ul><a href="#"
+                        class="inline-block bg-brand-green text-brand-white px-8 py-3 rounded-full font-bold hover:bg-brand-orange transition-colors duration-300">Apply
+                        Now</a>
+                </div>
+            </div>
+            <!-- New Section: How to Use Your Working Capital Loan -->
+            <div class="mt-20">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">How Short Term Business Loans Can
+                        Work for You</h2>
+                    <p class="text-lg text-gray-700">When it comes to business loans, the length of your personal
+                        business loan term is almost as important as securing funds. Almost all businesses require
+                        additional capital at some point, but there’s a big difference between long-term loans and
+                        temporary financing solutions, otherwise known as short-term loans. Most short-term small
+                        business loans are repaid within a year or less, but some long-term loans can last over a
+                        decade. </p>
+                </div>
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">What are the Benefits of Short Term
+                        Business Loans?</h2>
+                    <p class="text-lg text-gray-700">Speed! Short term business loans offer quick financing to support
+                        immediate business expenses. Unlike long term loans, short term loans don’t come with the risk
+                        of accumulating large debts or interest and don’t have the long-term commitment to loan
+                        payments. A short term loan can provide the right amount of money for your business while
+                        allowing you to pay off the loan quickly.
+
+                        When would a business need a short term loan? Short term loans can benefit you when cash flow is
+                        slow during a short time period of time or when funding is needed to help your business grow. A
+                        short term loan can help your business now to set you up for long term success. Apply online to
+                        see what short-term financial solutions can help your business thrive. </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="../../Assets/images/fast-funding.svg" alt="Hire Staff" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-brand-blue">Fast Funding</h3>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Most short term loan programs are funded quickly, some within 24 hours</li>
+                            <li>Not waiting for loan funds to hit your account means you can utilize the money when you
+                                need it most</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="../../Assets/images/increased-approval.svg" alt="Finance Equipment" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-brand-blue">Increased Approval Rates</h3>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Short term business loan lenders often don’t require collateral or perfect credit for
+                                credit approvals</li>
+                            <li>Alternative lenders like Glavisloan typically have higher approval rates for short
+                                term loans</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="../../Assets/images/flexible-repayment.svg" alt="Add Inventory" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-brand-blue">Flexible Repayment Options</h3>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Customized, short term loans can offer a variety of payment options</li>
+                            <li>Flexibility lets you set up a loan program that works best for your unique business
+                                needs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="../../Assets/images/immediate-needs.svg" alt="Manage Cash Flow" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-brand-blue">Take Care of Immediate Needs</h3>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Cover costs related to equipment repairs or an unexpected tax bill by using a short term
+                                business loan</li>
+                            <li>Use short term loans to set your business up for future success by investing in
+                                long-term growth plans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Section: How to Apply -->
+        <div class="mt-20 bg-gray-50 p-12 rounded-lg text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">How to Apply</h2>
+            <p>Short term business loans from Glavisloan make the online application and approval process easier
+                than ever.</p>
+            <p class="mb-12">Applying for short term business lending is simple. After you fill out a simple online
+                application, we’ll reach out to you to learn more about your business, your resources, and your needs.
+                Together, we can create a loan program and business loan terms designed to fit your company needs in
+                terms of coverage and payment timelines. Apply today to get your process started.</p>
+            <a href="{{ url('../loan-application') }}"
+                class="inline-block bg-brand-green text-brand-white px-10 py-4 rounded-full font-bold text-lg hover:bg-brand-orange transition-colors duration-300">Apply
+                Now</a>
+            <p class="mt-4 text-gray-700">or call 888.733.2383</p>
+
+            <!-- New Section: Our Process -->
+            <div class="mt-20">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">How Do Short Term Business Loans
+                        Work?</h2>
+
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <!-- Card 1 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg text-center">
+                        <img src="{{ asset('images/fast-easy.svg') }}" alt="Fast and Easy Application"
+                            class="h-24 w-24 mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Fast & Easy Application Process</h3>
+                        <p class="text-gray-700">No-cost, no-obligation application with minimal paperwork.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg text-center">
+                        <img src="{{ asset('images/helpful-guidance.svg') }}" alt="Helpful Loan Guidance"
+                            class="h-24 w-24 mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Helpful Loan Guidance</h3>
+                        <p class="text-gray-700">A Funding Specialist will contact you to help you choose the right
+                            business financing option.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg text-center">
+                        <img src="{{ asset('images/quick-decision.svg') }}" alt="Quick Decision"
+                            class="h-24 w-24 mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Quick Decision, Fast Funding</h3>
+                        <p class="text-gray-700">You could be approved, and funds deposited into your account, in as
+                            little as 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- app footer -->
+    <footer class="bg-brand-blue text-brand-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><!-- Logo & Description -->
+                <div class="mb-8 lg:mb-0"><a href="/" class="flex-shrink-0 mb-4"><img
+                            src="src/Assets/images/logowhite.png" alt="Large Logo" class="h-12"></a>
+                    <p class="text-sm text-brand-gray">Providing tailored financial solutions for businesses to thrive
+                        and grow.</p>
+                </div> <!-- Company Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">About
+                                Us</a></li>
+                       
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">How We
+                                Work</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products & Solutions -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Products & Solutions</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Small
+                                Business Loans</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Working
+                                Capital</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Equipment
+                                Financing</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Funding
+                                Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-gray mt-8 pt-6 text-center text-sm text-brand-gray">
+                &copy; 2024 Glavisloan. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Your App JS -->
+    <script src="../../JS/app.js"></script>
+</body>
+
+</html>

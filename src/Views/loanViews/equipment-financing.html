@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Financing & Leasing</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../Assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../Assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../Assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../../Assets/images/site.webmanifest">
+
+    <!-- fontawsome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../JS/tailwind.config.js"></script>
+
+    <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+
+
+<body>
+
+    <!-- app header -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <!-- Top Header (visible on larger screens, hidden on mobile) -->
+        <div class="bg-brand-blue text-brand-white py-2 hidden sm:block">
+            <div class="container mx-auto px-4 flex justify-end items-center">
+                <a href="tel:123-456-7890"
+                    class="flex items-center space-x-2 text-sm text-brand-white hover:text-brand-gray smooth-transition mr-4  rounded"
+                    aria-label="Call us at 123-456-7890">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>123-456-7890</span>
+                </a>
+                <a href="#" class="text-sm text-brand-white hover:text-brand-gray smooth-transition  rounded px-2 py-1">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <nav class="bg-brand-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+            <div class="container mx-auto px-4 py-3 lg:py-4">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="../../../index.html" class="flex-shrink-0  rounded">
+                        <!-- Logo for large screens -->
+                        <img src="../../Assets/images/lgLogo.png" alt="Company Logo"
+                            class="hidden md:block h-10 lg:h-12 smooth-transition">
+                        <!-- Logo for small screens -->
+                        <img src="../../Assets/images/smLogo.png" alt="Company Logo"
+                            class="md:hidden h-10 smooth-transition">
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button"
+                        class="md:hidden p-2 text-brand-blue  rounded-lg smooth-transition hover:bg-brand-gray smooth-transition cursor-pointer"
+                        aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                            <span class="hamburger-line block w-6 h-0.5 bg-current"></span>
+                        </div>
+                    </button>
+
+                    <!-- Desktop Nav Links & Button -->
+                    <div id="main-nav-menu"
+                        class="hidden md:flex md:items-center lg:space-x-8 md:space-x-4 cursor-pointer">
+                        <!-- Dropdown: Loans & Financing -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="loans">
+                                <span class="md:text-sm lg:text-base ">Loans & Financing</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="Loans and Financing submenu">
+                                <a href="small-business-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Small Business Loans</a>
+                                <a href="working-capital-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Working Capital Loans</a>
+                                <a href="short-term-business-loans.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Short Term Business Loans</a>
+                                <a href="equipment-financing.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Equipment Financing & Leasing</a>
+                                <a href="types-of-funding-solutions.html"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Types of Funding Solutions</a>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown: Who We Serve -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="serve">
+                                <span class="md:text-sm lg:text-base ">Who We Serve</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="Who We Serve submenu">
+                                <a href="/who-we-serve/industries"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Industries</a>
+                                <a href="/who-we-serve/customer-reviews"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Customer Reviews</a>
+                                <a href="/who-we-serve/meet-our-customers"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Meet Our Customers</a>
+                            </div>
+                        </div>
+
+                      
+
+                        <!-- Dropdown: About Us -->
+                        <div class="relative group">
+                            <button
+                                class="dropdown-toggle text-brand-blue font-semibold hover:text-brand-orange smooth-transition flex items-center  rounded px-2 py-1 cursor-pointer"
+                                aria-expanded="false" aria-haspopup="true" data-dropdown="about">
+                                <span class="md:text-sm lg:text-base ">About Us</span>
+                                <i class="fas fa-chevron-down ml-2 text-xs smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu absolute z-20 hidden bg-brand-white shadow-xl rounded-lg mt-2 w-64 border border-gray-100 py-2"
+                                role="menu" aria-label="About Us submenu">
+                                <a href="#"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">Sponsorships</a>
+                                
+                               
+                                <a href="#"
+                                    class="block px-4 py-3 text-brand-blue hover:bg-brand-gray smooth-transition text-sm "
+                                    role="menuitem">How We Work</a>
+                            </div>
+                        </div>
+
+                        <!-- "Apply Now" Button -->
+                        <a href="../apply-for-loan.html"
+                            class="bg-brand-green text-brand-white px-4 lg:px-6 py-2 rounded-full font-bold hover:bg-brand-orange smooth-transition  md:text-sm lg:text-base shadow-md hover:shadow-lg transform hover:scale-105">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0 smooth-transition"
+                    aria-label="Mobile navigation menu">
+                    <div class="py-4 space-y-2">
+                        <!-- Mobile Contact Info -->
+                        <div class="border-b border-gray-200 pb-4 mb-4">
+                            <a href="tel:123-456-7890"
+                                class="flex items-center space-x-3 text-brand-blue hover:text-brand-orange smooth-transition p-3 rounded-lg "
+                                aria-label="Call us at 123-456-7890">
+                                <i class="fas fa-phone text-sm" aria-hidden="true"></i>
+                                <span class="font-medium">123-456-7890</span>
+                            </a>
+                        </div>
+
+                        <!-- Mobile Dropdown: Loans & Financing -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="loans">
+                                <span>Loans & Financing</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="/loans-financing/small-business-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Small
+                                        Business Loans</a>
+                                    <a href="/loans-financing/working-capital-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Working
+                                        Capital Loans</a>
+                                    <a href="/loans-financing/short-term-business-loans"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Short
+                                        Term Business Loans</a>
+                                    <a href="/loans-financing/equipment-financing-leasing"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Equipment
+                                        Financing & Leasing</a>
+                                    <a href="/loans-financing/types-of-funding-solutions"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Types
+                                        of Funding Solutions</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Dropdown: Who We Serve -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="serve">
+                                <span>Who We Serve</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="/who-we-serve/industries"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Industries</a>
+                                    <a href="/who-we-serve/customer-reviews"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Customer
+                                        Reviews</a>
+                                    <a href="/who-we-serve/meet-our-customers"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Meet
+                                        Our Customers</a>
+                                </div>
+                            </div>
+                        </div>
+
+                      
+
+                        <!-- Mobile Dropdown: About Us -->
+                        <div class="mobile-dropdown">
+                            <button
+                                class="mobile-dropdown-toggle w-full flex items-center justify-between text-brand-blue font-semibold p-3 hover:bg-brand-gray rounded-lg smooth-transition  text-left"
+                                aria-expanded="false" data-mobile-dropdown="about">
+                                <span>About Us</span>
+                                <i class="fas fa-chevron-down text-sm smooth-transition" aria-hidden="true"></i>
+                            </button>
+                            <div class="mobile-dropdown-content max-h-0 overflow-hidden smooth-transition">
+                                <div class="pl-6 py-2 space-y-1">
+                                    <a href="#"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">Sponsorships</a>
+                                   
+                                   
+                                    <a href="#"
+                                        class="block p-2 text-sm text-brand-blue hover:text-brand-orange smooth-transition rounded ">How
+                                        We Work</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile "Apply Now" Button -->
+                        <div class="pt-4">
+                            <a href="/apply-for-loan"
+                                class="block w-full bg-brand-green text-brand-white text-center py-3 px-6 rounded-full font-bold hover:bg-brand-orange smooth-transition shadow-md">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container mx-auto px-4 py-16">
+
+            <div class="max-w-4xl mx-auto text-center pt-6 md:pt-24">
+                <h1 class="text-4xl sm:text-5xl font-bold text-brand-blue mb-4 leading-tight">Expand Your Business with
+                    Equipment Financing</h1>
+                <p class="text-lg text-gray-700">Don’t let the cost of new equipment hold you back. Our equipment
+                    financing and leasing solutions are designed to help you acquire the machinery, technology, and
+                    vehicles your business needs to grow. With tailored terms and competitive rates, you can get the
+                    tools you need without draining your working capital.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center mt-12 space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2"><img src="../../Assets/images/leasing.png" alt="Equipment Financing & Leasing"
+                        class="rounded-lg shadow-lg"></div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-brand-blue mb-4">Key Advantages</h2>
+                    <ul class="list-none text-lg text-gray-700 space-y-4 mb-8">
+                        <li class="flex items-start"><i
+                                class="fas fa-check text-brand-green mt-1 mr-2"></i><span>Funding for both new and used
+                                equipment.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-green mt-1 mr-2"></i><span>Lease
+                                or purchase options to fit your needs.</span></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-check text-brand-green mt-1 mr-2"></i><span>Preserve working capital for
+                                daily operations.</span></li>
+                    </ul><a href="#"
+                        class="inline-block bg-brand-green text-brand-white px-8 py-3 rounded-full font-bold hover:bg-brand-orange transition-colors duration-300">Apply
+                        Now</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="../../Assets/images/finance-equipment.svg" alt="Hire Staff" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-brand-blue">Equipment Financing Options</h3>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Get up to $150,000 for equipment that’s critical for running your business</li>
+                            <li>Lease new or pre-owned equipment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="../../Assets/images/quick-decision.svg" alt="Finance Equipment" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-brand-blue">Improve Efficiency</h3>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Help operations run smoother with new equipment</li>
+                            <li>Keep your working capital to fund other important parts of your business</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="../../Assets/images/helpful-guidance.svg" alt="Add Inventory" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-brand-blue">No Limitations</h3>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Lease about any type of new or pre-owned equipment</li>
+                            <li>You decide what equipment your business really needs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="../../Assets/images/hire-staff.svg" alt="Manage Cash Flow" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-brand-blue">Quick, Painless Process</h3>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Get funding fast so you can make important purchases quickly</li>
+                            <li>Flexible payment options are available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Section: Equipment Financing & Leasing Details -->
+            <div class="mt-20 flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">Equipment Financing & Leasing
+                        Details</h2>
+                    <p class="text-lg text-gray-700">Unexpected equipment repairs or upgrades can have a significant
+                        impact on your business. From heavy equipment like forklifts to large medical equipment, having
+                        the equipment you need is an important part of your business’s success. The cost of equipment
+                        purchases don’t have to be prohibitive – with equipment financing and leasing, you can get up to
+                        $150,000 in funding for new or pre-owned equipment. At Glavisloan, you’ll be able to take
+                        advantage of our Lowest Payment Guarantee and no down payment requirements. Our dedicated
+                        Funding Specialists are committed to securing fast approvals and the best possible terms for
+                        your business.</p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="../../Assets/images/equipment-leasing-financing.jpeg"
+                        alt="A variety of business equipment" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+            </div>
+            <!-- New Section: Qualifications for Equipment Financing -->
+            <div class="bg-brand-blue text-brand-white p-12 rounded-lg mt-20">
+                <h2 class="text-4xl font-bold md:text-center mb-8">Qualifications for Equipment Financing</h2>
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-8">
+                    <div class="md:text-center">
+                        <p class="text-4xl font-bold">6 months</p>
+                        <p class="text-lg">in business</p>
+                    </div>
+                    <div class="h-16 w-px bg-brand-white/50 hidden md:block"></div>
+                    <div class="md:text-center">
+                        <p class="text-4xl font-bold">Fair to</p>
+                        <p class="text-lg">Excellent Credit</p>
+                    </div>
+                    <div class="h-16 w-px bg-brand-white/50 hidden md:block"></div>
+                    <div class="md:text-center">
+                        <p class="text-4xl font-bold">Equipment quote</p>
+                        <p class="text-lg">from a vendor</p>
+                    </div>
+                </div>
+            </div>
+            <!-- New Section: How to Apply -->
+            <div class="mt-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">How to Apply</h2>
+                    <p class="text-lg text-gray-700">Applying for equipment financing from Glavisloan is easy.
+                        Simply fill out our quick and easy online application and one of our friendly Funding
+                        Specialists will contact you to learn more about your business. Your Funding Specialist can help
+                        you decide which financing option is a good fit for your business regardless of whether you need
+                        equipment financing or a small business loan. Once you apply for equipment financing, you’ll
+                        receive an answer in as little as 24 hours.</p>
+                    <img src="../../Assets/images/process-image.webp" alt="A hand pointing to a button."
+                        class=" mt-8 mb-6 mx-auto w-full md:max-w-2xl hidden md:block smooth-transition">
+                    <img src="../../Assets/images/process-image.webp" alt="A hand pointing to a button."
+                        class=" mt-8 mb-6 mx-auto w-full md:max-w-2xl md:hidden  smooth-transition">
+                    <a href="../../apply-now.html"
+                        class="inline-block bg-brand-green text-brand-white px-10 py-4 rounded-full font-bold text-lg hover:bg-brand-orange transition-colors duration-300">Apply
+                        Now</a>
+                    <p class="mt-4 text-gray-700">or call 888.733.2383</p>
+                </div>
+            </div>
+
+            <section class="py-16 ">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">Types of Equipment Financing</h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+
+
+                        <!-- Industry Card 2: Healthcare -->
+                        <a href="#"
+                            class="group relative block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <img src="../../Assets/images/healthCare.jpg" alt="Healthcare Industry"
+                                class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-brand-black bg-opacity-70 flex flex-col justify-center items-center text-brand-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
+                                <p class="text-sm">Financing for medical equipment, practice expansion, and specialized
+                                    staff.</p>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-brand-blue bg-opacity-80 text-center">
+                                <h3 class="text-lg font-bold text-brand-white">Commercial Fleet Vehicle Financing &
+                                    Business Auto Loans</h3>
+                            </div>
+                        </a>
+
+                        <!-- Industry Card 3: Restaurants & Food Service -->
+                        <a href="#"
+                            class="group relative block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <img src="../../Assets/images/restaurant.jpg" alt="Restaurants and Food Service Industry"
+                                class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-brand-black bg-opacity-70 flex flex-col justify-center items-center text-brand-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
+                                <p class="text-sm">Capital to cover everything from kitchen renovations to daily
+                                    inventory and payroll.</p>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-brand-blue bg-opacity-80 text-center">
+                                <h3 class="text-lg font-bold text-brand-white">Restaurants & Food Service</h3>
+                            </div>
+                        </a>
+
+                        <!-- Industry Card 4: Retail -->
+                        <a href="#"
+                            class="group relative block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <img src="../../Assets/images/beauty.png" alt="Retail Industry"
+                                class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-brand-black bg-opacity-70 flex flex-col justify-center items-center text-brand-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
+                                <p class="text-sm">Access funding for inventory, marketing, and expansion of your
+                                    storefront or online business.</p>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-brand-blue bg-opacity-80 text-center">
+                                <h3 class="text-lg font-bold text-brand-white">Beauty</h3>
+                            </div>
+                        </a>
+
+                        <!-- Industry Card 5: Transportation -->
+                        <a href="#"
+                            class="group relative block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <img src="../../Assets/images/gym.png" alt="Transportation Industry"
+                                class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-brand-black bg-opacity-70 flex flex-col justify-center items-center text-brand-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
+                                <p class="text-sm">Get loans for fleet upgrades, vehicle maintenance, and fuel costs.
+                                </p>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-brand-blue bg-opacity-80 text-center">
+                                <h3 class="text-lg font-bold text-brand-white">Gym</h3>
+                            </div>
+                        </a>
+                        <!-- Industry Card 5: Transportation -->
+                        <a href="#"
+                            class="group relative block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <img src="../../Assets/images/agriculture.png" alt="Transportation Industry"
+                                class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-brand-black bg-opacity-70 flex flex-col justify-center items-center text-brand-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
+                                <p class="text-sm">Get loans for fleet upgrades, vehicle maintenance, and fuel costs.
+                                </p>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-brand-blue bg-opacity-80 text-center">
+                                <h3 class="text-lg font-bold text-brand-white">Agriculture</h3>
+                            </div>
+                        </a>
+
+                        <!-- Industry Card 6: Manufacturing -->
+                        <a href="#"
+                            class="group relative block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <img src="../../Assets/images/construction.png" alt="Manufacturing Industry"
+                                class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-brand-black bg-opacity-70 flex flex-col justify-center items-center text-brand-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
+                                <p class="text-sm">Finance new machinery, raw materials, and operational costs to boost
+                                    production.</p>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-brand-blue bg-opacity-80 text-center">
+                                <h3 class="text-lg font-bold text-brand-white">Construction</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- <a href="#"
+                        class="bg-brand-green text-brand-white px-8 py-3 rounded-full font-bold text-lg inline-block hover:bg-brand-orange transition-colors duration-300">View
+                        All</a> -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- app footer -->
+    <footer class="bg-brand-blue text-brand-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><!-- Logo & Description -->
+                <div class="mb-8 lg:mb-0"><a href="/" class="flex-shrink-0 mb-4"><img
+                            src="../../Assets/images/logowhite.png" alt="Large Logo" class="h-12"></a>
+                    <p class="text-sm text-brand-gray">Providing tailored financial solutions for businesses to thrive
+                        and grow.</p>
+                </div> <!-- Company Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">About
+                                Us</a></li>
+                      
+                        
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">How We
+                                Work</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products & Solutions -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Products & Solutions</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Small
+                                Business Loans</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Working
+                                Capital</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Equipment
+                                Financing</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-brand-white hover:text-brand-gray transition-colors duration-300">Funding
+                                Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-brand-white hover:text-brand-orange transition-colors duration-300"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-gray mt-8 pt-6 text-center text-sm text-brand-gray">
+                &copy; 2024 Glavisloan. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Your App JS -->
+    <script src="../../JS/app.js"></script>
+</body>
+
+</html>
